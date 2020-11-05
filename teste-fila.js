@@ -1,4 +1,4 @@
-const Queue = require('.lib/Queue')
+const Queue = require('./lib/Queue2')
 
 let fila = new Queue()
 
