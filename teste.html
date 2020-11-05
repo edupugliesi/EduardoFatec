@@ -1,0 +1,29 @@
+<style>
+input {text-align: right}
+</style>
+<p>Cálculo da combinação de
+<input type="text" value="6" size="3" id="m"
+onChange="aComb();" /> elementos
+<input type="text" value="3" size="3" id="p"
+onChange="aComb();" /> a <u id="p1">3</u>.</p>
+<p>Resultado de C(<u id="m1">6</u>,<u id="p2">3
+</u>)= <b id="comb">20</b>.</p>
+<script language="JavaScript">
+var m= document.getElementById ("m");
+var m1= document.getElementById ("m1");
+var p= document.getElementById ("p");
+var p1= document.getElementById ("p1");
+var p2= document.getElementById ("p2");
+var comb= document.getElementById ("comb");
+function aComb () {
+    var iComb= 1;
+    var j= m.value;
+    for (var i= 1; i<= p.value; i++) {
+        iComb= iComb* j/ i;
+        j--;
+    }
+    comb.innerHTML= iComb;
+    p1.innerHTML= p2.innerHTML= p.value;
+    m1.innerHTML= m.value;
+}
+</script> 
